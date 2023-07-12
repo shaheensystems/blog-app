@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Add Blog Post
+
+    form(action="/", method="POST")
+      div
+        label(for="title") Title:
+        input(type="text", id="title", name="title", required)
+      div
+        label(for="content") Content:
+        textarea(id="content", name="content", required)
+      div
+        label(for="author") Author:
+        input(type="text", id="author", name="author", required)
+      button(type="submit") Submit

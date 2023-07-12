@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Blog Posts
+  each blog in blogs
+    .blog-post
+      h2= blog.title
+      p= blog.content
+      p.author Written by #{blog.author}
+      p.date Posted on #{blog.date.toDateString()}
